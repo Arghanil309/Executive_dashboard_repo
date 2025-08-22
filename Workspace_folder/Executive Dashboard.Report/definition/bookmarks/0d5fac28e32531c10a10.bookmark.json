@@ -1,0 +1,2524 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "State Bar button",
+  "name": "0d5fac28e32531c10a10",
+  "options": {
+    "targetVisualNames": [
+      "7bbf83c149d072541005"
+    ]
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "df9e6ef569118136711d",
+    "sections": {
+      "df9e6ef569118136711d": {
+        "filters": {
+          "byExpr": [
+            {
+              "name": "44ee838f0bbeb2d198b6",
+              "type": "Categorical",
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "p",
+                    "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "p"
+                                }
+                              },
+                              "Property": "calendar_year"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'2024'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'2025'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'2023'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                    }
+                  },
+                  "Property": "calendar_year"
+                }
+              },
+              "howCreated": 1
+            }
+          ]
+        },
+        "visualContainers": {
+          "c20309ad65e5a9e27ecb": {
+            "filters": {
+              "byName": {
+                "473bbbcf702175230029": {
+                  "name": "473bbbcf702175230029",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "Attribute"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Green Accounts Overall Rating Current YTD'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Yellow Accounts Overall Rating Current YTD'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Red Accounts Overall Rating Current YTD'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Attribute"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              },
+              "byExpr": [
+                {
+                  "name": "57b3bdb78c496ad5de7d",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "AGGREGATE_TYPE"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'NATIONAL_LEVEL_SERVICE_SEGMENT'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "AGGREGATE_TYPE"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "7b0b47a3cc778ead7283",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                            }
+                          },
+                          "Property": "Value"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "f86bb9f5c8e9b08eed29",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "SERVICE_SEGMENT_IMP__C"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "194087eeb96233d225d8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Schema": "extension",
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Progress %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "hundredPercentStackedBarChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "SERVICE_SEGMENT_IMP__C"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "1b64822b14a10d09eb70": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "473bbbcf702175230029",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "Attribute"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Green Accounts Overall Rating Current YTD'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Yellow Accounts Overall Rating Current YTD'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Red Accounts Overall Rating Current YTD'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Attribute"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "57b3bdb78c496ad5de7d",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "AGGREGATE_TYPE"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'STATE_LEVEL_SERVICE_SEGMENT'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "AGGREGATE_TYPE"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "0ebc6314835450acd31c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "State"
+                        }
+                      },
+                      "Property": "STATE_ABBREVIATION"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "7b0b47a3cc778ead7283",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                            }
+                          },
+                          "Property": "Value"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "e387e093dc50339dbce0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "SERVICE_SEGMENT_IMP__C"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "73aa71a9c132b1bbc905",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Schema": "extension",
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Progress %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "hundredPercentStackedBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                            }
+                          },
+                          "Property": "Value"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "SERVICE_SEGMENT_IMP__C"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "1b72d2a39c231d7ad387": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "d2426a5ddc308372ce08": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "56dee105d80c908d5b78": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "bb4e48399e0080021098",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "AGGREGATE_TYPE"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "e332aee80be2e8004970",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Attribute"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "1751991e54bc92c4ee7e",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "subject"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "dc6ddf87e507e3d753a2",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Schema": "extension",
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Progress %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e8982f7b2e7109c02ce6",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Year identifier"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "subject"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "9a4ae48d27ace6d5d8ba": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "bb4e48399e0080021098",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "AGGREGATE_TYPE"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'STATE_LEVEL'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "AGGREGATE_TYPE"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "15a1a200788bcca90e05",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "Attribute"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Green Accounts Overall Rating Current YTD'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Green Accounts Overall Rating Prior YTD'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Attribute"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "db3ad484c82a5a45ca92",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "subject"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "14938fef32b46c04614b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Schema": "extension",
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Progress %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "713b2eb20028080a701a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Year identifier"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "subject"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "subject"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "3b2558f80d5a065c1475": {
+            "filters": {
+              "byName": {
+                "473bbbcf702175230029": {
+                  "name": "473bbbcf702175230029",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "Attribute"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Green Accounts Weekly Average TOT Rating Current YTD'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Red Accounts Weekly Average TOT Rating Current YTD'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Yellow Accounts Weekly Average TOT Rating Current YTD'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Attribute"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                "57b3bdb78c496ad5de7d": {
+                  "name": "57b3bdb78c496ad5de7d",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "AGGREGATE_TYPE"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'STATE_LEVEL_SERVICE_SEGMENT'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "AGGREGATE_TYPE"
+                    }
+                  },
+                  "howCreated": 1
+                }
+              },
+              "byExpr": [
+                {
+                  "name": "0ebc6314835450acd31c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "State"
+                        }
+                      },
+                      "Property": "STATE_ABBREVIATION"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "7b0b47a3cc778ead7283",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                            }
+                          },
+                          "Property": "Value"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "73d6e59339e3309088ae",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "SERVICE_SEGMENT_IMP__C"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "79e7b735784104025366",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Schema": "extension",
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Progress %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "hundredPercentStackedBarChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "SERVICE_SEGMENT_IMP__C"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "9a9cd2860e9ce0ba79a4": {
+            "filters": {
+              "byName": {
+                "473bbbcf702175230029": {
+                  "name": "473bbbcf702175230029",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "Attribute"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Green Accounts Average Pass Rate Rating Current YTD'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Red Accounts Average Pass Rate Rating Current YTD'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Yellow Accounts Average Pass Rate Rating Current YTD'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Attribute"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                "57b3bdb78c496ad5de7d": {
+                  "name": "57b3bdb78c496ad5de7d",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "AGGREGATE_TYPE"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'STATE_LEVEL_SERVICE_SEGMENT'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "AGGREGATE_TYPE"
+                    }
+                  },
+                  "howCreated": 1
+                }
+              },
+              "byExpr": [
+                {
+                  "name": "0ebc6314835450acd31c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "State"
+                        }
+                      },
+                      "Property": "STATE_ABBREVIATION"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "7b0b47a3cc778ead7283",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                            }
+                          },
+                          "Property": "Value"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "b5f134b80c895a615518",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "SERVICE_SEGMENT_IMP__C"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4927d74906eb20d7a7e7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Schema": "extension",
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Progress %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "hundredPercentStackedBarChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "SERVICE_SEGMENT_IMP__C"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "59058f6ab066566a70ab": {
+            "filters": {
+              "byName": {
+                "473bbbcf702175230029": {
+                  "name": "473bbbcf702175230029",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "Attribute"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Green Accounts Percent Using PI Rating Current YTD'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Yellow Accounts Percent Using PI Rating Current YTD'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Red Accounts Weekly Percent Using PI Current YTD'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Attribute"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                "57b3bdb78c496ad5de7d": {
+                  "name": "57b3bdb78c496ad5de7d",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "AGGREGATE_TYPE"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'STATE_LEVEL_SERVICE_SEGMENT'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "AGGREGATE_TYPE"
+                    }
+                  },
+                  "howCreated": 1
+                }
+              },
+              "byExpr": [
+                {
+                  "name": "0ebc6314835450acd31c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "State"
+                        }
+                      },
+                      "Property": "STATE_ABBREVIATION"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "7b0b47a3cc778ead7283",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                            }
+                          },
+                          "Property": "Value"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "7596f125736bb0ab89a8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "SERVICE_SEGMENT_IMP__C"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fba6db8e40abeb90cc8a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Schema": "extension",
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Progress %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "hundredPercentStackedBarChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "SERVICE_SEGMENT_IMP__C"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "0d7ae94f081830ea050c": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "a3ddf7ce3540ee01aba8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "de1e1ab010147bda0e0b",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "AGGREGATE_TYPE"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'NATIONAL_LEVEL'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                        }
+                      },
+                      "Property": "AGGREGATE_TYPE"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "a4e58d5ca00d00b6a666",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Start "
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "77d540b8b9c691ba2b76",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                        }
+                      },
+                      "Property": "calendar_year"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f1f9970ee17070167554",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Schema": "extension",
+                          "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                        }
+                      },
+                      "Property": "Green Overall Rating"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Start "
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Month"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Start "
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Month"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "a54ecef9365b16276c1a": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0338b2259997332628c0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "subject"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "p",
+                                "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "p"
+                                            }
+                                          },
+                                          "Property": "subject"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'MATH'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "subject"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "e8f1179cb38ebb5e2056": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "5e628de1387094e7180c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "8ab018f21eb136dd6dab",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Schema": "extension",
+                          "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                        }
+                      },
+                      "Property": "Average Pass Rate Rating"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "aa3cc1fe5309bd26037e",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "AGGREGATE_TYPE"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'STATE_LEVEL'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                        }
+                      },
+                      "Property": "AGGREGATE_TYPE"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "50cca86275e6e02473e6",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Start "
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "8ec91653638440bb60e6",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Schema": "extension",
+                          "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                        }
+                      },
+                      "Property": "Green Overall Rating"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "360d4b7481a52468b749",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                        }
+                      },
+                      "Property": "calendar_year"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Start "
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Month"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "7bbf83c149d072541005": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "48aa3a321865e0a963c5",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "s",
+                        "Entity": "State",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "s"
+                                      }
+                                    },
+                                    "Property": "STATE_ABBREVIATION"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "null"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "State"
+                        }
+                      },
+                      "Property": "STATE_ABBREVIATION"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "s",
+                                "Entity": "State",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "s"
+                                            }
+                                          },
+                                          "Property": "STATE_ABBREVIATION"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'AK'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "State"
+                        }
+                      },
+                      "Property": "STATE_ABBREVIATION"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "461f38a91e3ed183d5cc": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "3be5e2e030b1b7cd1cea": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "e029ed18d554ed03bce8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0a04df027d7d8cb03223",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "Attribute"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Green Accounts Overall Rating Current YTD'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Attribute"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "1e3c438f2a533c4b6e84",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "AGGREGATE_TYPE"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'STATE_LEVEL'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "AGGREGATE_TYPE"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "d17a2eee556bb0080e39",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Schema": "extension",
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Progress %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5f27893b8029b972902b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Schema": "extension",
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Target Pi"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "gauge",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Schema": "extension",
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Progress %"
+                    }
+                  }
+                }
+              ],
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "b31336c816963016dc60": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "24a994728aa2ae4b5271": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "2700b8ed165773e55ab3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0a04df027d7d8cb03223",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "Attribute"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Percent Green Accounts Overall Rating Current YTD'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Attribute"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "1e3c438f2a533c4b6e84",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "AGGREGATE_TYPE"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'STATE_LEVEL'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "AGGREGATE_TYPE"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "6b5fb02b08b18054ae0e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Schema": "extension",
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Progress %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "gauge",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Schema": "extension",
+                          "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                        }
+                      },
+                      "Property": "Progress %"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "b2dc9ff7b9537dcb8e59": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "eb2d833411e716e5c855",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Query1"
+                            }
+                          },
+                          "Property": "Last Refreshed"
+                        }
+                      },
+                      "Function": 3
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "94707398032398c0d763": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "25a4cb2c8d5c74360d04": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "209c762d1c0624d78314": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "0e8d3609d38283493614": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "visible": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
