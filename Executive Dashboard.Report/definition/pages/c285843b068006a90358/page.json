@@ -1,0 +1,168 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "c285843b068006a90358",
+  "displayName": "PI Health",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fa283db4703c38c6ea4a",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+              }
+            },
+            "Property": "subject"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "44ee838f0bbeb2d198b6",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+              }
+            },
+            "Property": "calendar_year"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "p",
+              "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "p"
+                          }
+                        },
+                        "Property": "calendar_year"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'2024'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'2025'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'2023'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ],
+    "filterSortOrder": "Custom"
+  },
+  "objects": {
+    "displayArea": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "198L"
+              }
+            }
+          },
+          "foregroundColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#252423'"
+                  }
+                }
+              }
+            }
+          },
+          "titleSize": {
+            "expr": {
+              "Literal": {
+                "Value": "12L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "type": "Drillthrough",
+  "visualInteractions": [
+    {
+      "source": "46b29df357c57d253226",
+      "target": "b740cb4ab5c3a52161b1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "46b29df357c57d253226",
+      "target": "40cb487010eed4b75c76",
+      "type": "NoFilter"
+    },
+    {
+      "source": "46b29df357c57d253226",
+      "target": "f53622833863d26a71d2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "46b29df357c57d253226",
+      "target": "c82697c01a67ba04d360",
+      "type": "NoFilter"
+    }
+  ]
+}

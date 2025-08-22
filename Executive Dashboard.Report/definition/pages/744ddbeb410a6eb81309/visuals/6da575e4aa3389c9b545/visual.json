@@ -1,0 +1,284 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "6da575e4aa3389c9b545",
+  "position": {
+    "x": 554.28571428571433,
+    "y": 157.14285714285714,
+    "z": 1000,
+    "height": 251.42857142857144,
+    "width": 405.71428571428572,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                    }
+                  },
+                  "Property": "Product Line"
+                }
+              },
+              "queryRef": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY.Product Line",
+              "nativeQueryRef": "Product Line",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                    }
+                  },
+                  "Property": "Fiscal Year"
+                }
+              },
+              "queryRef": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY.Fiscal Year",
+              "nativeQueryRef": "Fiscal Year"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                    }
+                  },
+                  "Property": "ACV Productline"
+                }
+              },
+              "queryRef": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY.ACV Productline",
+              "nativeQueryRef": "ACV Productline"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Schema": "extension",
+                    "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                  }
+                },
+                "Property": "ACV Productline"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000000D"
+                }
+              }
+            },
+            "labelOverflow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Auto'"
+                }
+              }
+            },
+            "optimizeLabelDisplay": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2b0f2f7b8014695d7c05",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+              }
+            },
+            "Property": "Product Line"
+          }
+        },
+        "type": "Categorical",
+        "objects": {
+          "general": [
+            {
+              "properties": {}
+            }
+          ]
+        }
+      },
+      {
+        "name": "21ff491545aeed540c9e",
+        "ordinal": 1,
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                  }
+                },
+                "Property": "Annualized Contract Year Value"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "a870c3ffe7a030e8cd20",
+        "ordinal": 2,
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                  }
+                },
+                "Property": "Forecast"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "16a1bfeee633e702480b",
+        "ordinal": 3,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+              }
+            },
+            "Property": "Fiscal Year"
+          }
+        },
+        "type": "Categorical"
+      }
+    ],
+    "filterSortOrder": "Custom"
+  }
+}

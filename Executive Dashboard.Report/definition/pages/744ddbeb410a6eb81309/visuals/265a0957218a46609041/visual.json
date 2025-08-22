@@ -1,0 +1,308 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "265a0957218a46609041",
+  "position": {
+    "x": 490.00000000000006,
+    "y": 167.14285714285717,
+    "z": 4000,
+    "height": 310,
+    "width": 454.28571428571433,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                    }
+                  },
+                  "Property": "Product Line"
+                }
+              },
+              "queryRef": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY.Product Line",
+              "nativeQueryRef": "Product Line",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                    }
+                  },
+                  "Property": "Forecast 2025(Product line)"
+                }
+              },
+              "queryRef": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY.Forecast 2025(Product line)",
+              "nativeQueryRef": "Forecast 2025",
+              "displayName": "Forecast 2025",
+              "format": "G"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                    }
+                  },
+                  "Property": "Annualizes Booking YTD (Productline)"
+                }
+              },
+              "queryRef": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY.Annualizes Booking YTD 2025(Productline)",
+              "nativeQueryRef": "Annualizes Booking YTD",
+              "displayName": "Annualizes Booking YTD",
+              "format": "G"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                        }
+                      },
+                      "Property": "Target"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY.Target)",
+              "nativeQueryRef": "Target",
+              "displayName": "Target"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "blankRows": [
+        {
+          "properties": {
+            "showBlankRows": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "steppedLayoutIndentation": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "valuesOnRow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000000D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY.Forecast 2025(Product line)"
+          }
+        },
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000000D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY.Target)"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000000D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY.Annualizes Booking YTD 2025(Productline)"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2b0f2f7b8014695d7c05",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+              }
+            },
+            "Property": "Product Line"
+          }
+        },
+        "type": "Categorical",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "21ff491545aeed540c9e",
+        "ordinal": 1,
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                  }
+                },
+                "Property": "Annualized Contract Year Value"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "5f6065533a7a47501e60",
+        "ordinal": 2,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+              }
+            },
+            "Property": "AGGREGATE_TYPE"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {}
+            }
+          ]
+        }
+      },
+      {
+        "name": "a870c3ffe7a030e8cd20",
+        "ordinal": 3,
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                  }
+                },
+                "Property": "Forecast"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      }
+    ],
+    "filterSortOrder": "Custom"
+  },
+  "isHidden": true
+}

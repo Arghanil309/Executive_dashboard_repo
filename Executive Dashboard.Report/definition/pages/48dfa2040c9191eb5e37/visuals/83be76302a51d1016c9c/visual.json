@@ -1,0 +1,155 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "83be76302a51d1016c9c",
+  "position": {
+    "x": 0,
+    "y": 321.66666666666669,
+    "z": 1000,
+    "height": 398.33333333333337,
+    "width": 480
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                    }
+                  },
+                  "Property": "subject"
+                }
+              },
+              "queryRef": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2.subject",
+              "nativeQueryRef": "subject",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                    }
+                  },
+                  "Property": "calendar_year"
+                }
+              },
+              "queryRef": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2.calendar_year",
+              "nativeQueryRef": "calendar_year"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                    }
+                  },
+                  "Property": "Green Yearly Rating"
+                }
+              },
+              "queryRef": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2.Green Yearly Rating",
+              "nativeQueryRef": "Green Yearly Rating"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Schema": "extension",
+                    "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+                  }
+                },
+                "Property": "Green Yearly Rating"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "zoom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "logAxisScale": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "invertAxis": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

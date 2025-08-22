@@ -1,0 +1,101 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "744ddbeb410a6eb81309",
+  "displayName": "ACV",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 960,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0aa58ab9000d7d52802d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+              }
+            },
+            "Property": "Product Line"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "b"
+                              }
+                            },
+                            "Property": "Product Line"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Total All Products'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "b72cf98277a63fb7321d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+              }
+            },
+            "Property": "Fiscal Year"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode"
+}

@@ -1,0 +1,233 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "a007a8f440504e36b0ea",
+  "position": {
+    "x": 10.32258064516129,
+    "y": 0,
+    "z": 0,
+    "height": 526.45161290322585,
+    "width": 774.19354838709683
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                    }
+                  },
+                  "Property": "Fiscal Year"
+                }
+              },
+              "queryRef": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY.Fiscal Year",
+              "nativeQueryRef": "Fiscal Year",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                    }
+                  },
+                  "Property": "Product Line"
+                }
+              },
+              "queryRef": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY.Product Line",
+              "nativeQueryRef": "Product Line",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                        }
+                      },
+                      "Property": "Annualized Bookings YTD"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY.Annualized Bookings YTD)",
+              "nativeQueryRef": "Sum of Annualized Bookings YTD"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "84f8f50478a79c0b32ce",
+        "ordinal": 0,
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+                  }
+                },
+                "Property": "Annualized Bookings YTD"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "77b940ac25924880cdd5",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+              }
+            },
+            "Property": "AGGREGATE_TYPE"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "b"
+                          }
+                        },
+                        "Property": "AGGREGATE_TYPE"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'DISTRICT'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "13a209cd68b03ded0e87",
+        "ordinal": 2,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY"
+              }
+            },
+            "Property": "Product Line"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "b"
+                              }
+                            },
+                            "Property": "Product Line"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Total All Products'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "filterSortOrder": "Custom"
+  }
+}

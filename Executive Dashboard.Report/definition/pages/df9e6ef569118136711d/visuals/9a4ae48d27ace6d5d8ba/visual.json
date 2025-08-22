@@ -1,0 +1,352 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "9a4ae48d27ace6d5d8ba",
+  "position": {
+    "x": 323.78698224852076,
+    "y": 113.60946745562131,
+    "z": 11000,
+    "height": 275.97633136094674,
+    "width": 350.29585798816572,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                    }
+                  },
+                  "Property": "subject"
+                }
+              },
+              "queryRef": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP.subject",
+              "nativeQueryRef": "subject",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                    }
+                  },
+                  "Property": "Year identifier"
+                }
+              },
+              "queryRef": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP.Year identifier",
+              "nativeQueryRef": "Year identifier"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                    }
+                  },
+                  "Property": "Progress %"
+                }
+              },
+              "queryRef": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP.Progress %",
+              "nativeQueryRef": "Progress %"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelOverflow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableTitleDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#20732A'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                          }
+                        },
+                        "Property": "Attribute"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Percent Green Accounts Overall Rating Current YTD'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2F9766'"
+                    }
+                  }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "51D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                          }
+                        },
+                        "Property": "Attribute"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Percent Green Accounts Overall Rating Prior YTD'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                          }
+                        },
+                        "Property": "Year identifier"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Current YTD'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+                          }
+                        },
+                        "Property": "Year identifier"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Prior YTD'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'% Green Accounts Overall by Subject'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bb4e48399e0080021098",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+              }
+            },
+            "Property": "AGGREGATE_TYPE"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "15a1a200788bcca90e05",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP"
+              }
+            },
+            "Property": "Attribute"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      }
+    ],
+    "filterSortOrder": "Custom"
+  },
+  "isHidden": true
+}

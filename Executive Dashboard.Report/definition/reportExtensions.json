@@ -1,0 +1,432 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/reportExtension/1.0.0/schema.json",
+  "name": "extension",
+  "entities": [
+    {
+      "name": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2",
+      "measures": [
+        {
+          "name": "Average Pass Rate Rating",
+          "dataType": "Double",
+          "expression": "sum(PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2[Percent Average Pass Rate Rating])/100",
+          "formatString": "0\\ %;-0\\ %;0\\ %"
+        },
+        {
+          "name": "Green Average Time on Task Rating",
+          "dataType": "Double",
+          "expression": "SUM(PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2[Percent Green Average Time on Task Rating])/100",
+          "formatString": "0\\ %;-0\\ %;0\\ %"
+        },
+        {
+          "name": "Green Overall Rating",
+          "dataType": "Double",
+          "expression": "sum(PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2[Percent Green Overall Rating])/100",
+          "formatString": "0\\ %;-0\\ %;0\\ %"
+        },
+        {
+          "name": "Green Percent Using Instruction Rating",
+          "dataType": "Double",
+          "expression": "SUM(PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2[Percent Green Percent Using Instruction Rating])/100",
+          "formatString": "0\\ %;-0\\ %;0\\ %"
+        },
+        {
+          "name": "Green Yearly Rating",
+          "dataType": "Double",
+          "expression": "(SUM(PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2[Percent Green Overall Rating])/12)/100",
+          "formatString": "0\\ %;-0\\ %;0\\ %"
+        },
+        {
+          "name": "Green Percent Using Instruction Rating(Yearly)",
+          "dataType": "Double",
+          "expression": "(SUM(PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2[Percent Green Percent Using Instruction Rating])/12)/100",
+          "formatString": "0\\ %;-0\\ %;0\\ %"
+        },
+        {
+          "name": "Green Average Time on Task Rating (Yearly)",
+          "dataType": "Double",
+          "expression": "(SUM(PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2[Percent Green Average Time on Task Rating])/12)/100",
+          "formatString": "0\\ %;-0\\ %;0\\ %"
+        },
+        {
+          "name": "This Year Average Pass Rate Rating",
+          "dataType": "Double",
+          "expression": "CALCULATE(sum(PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2[Percent Average Pass Rate Rating]),PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2[calendar_year]=2025)",
+          "formatString": "General Number"
+        },
+        {
+          "name": "Average Pass Rate Rating(Yearly)",
+          "dataType": "Double",
+          "expression": "(sum(PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2[Percent Average Pass Rate Rating])/12)/100",
+          "formatString": "0\\ %;-0\\ %;0\\ %"
+        }
+      ]
+    },
+    {
+      "name": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+      "measures": [
+        {
+          "name": "Current Year Budget",
+          "dataType": "Double",
+          "expression": "SUM(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[% of Current Year Budget])/100",
+          "formatString": "0\\ %;-0\\ %;0\\ %"
+        },
+        {
+          "name": "Annualizes Booking YTD 2025",
+          "dataType": "Double",
+          "expression": "CALCULATE(Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualized Bookings YTD]),BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Fiscal Year]=FORMAT(TODAY(), \"YYYY\")\n,BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[AGGREGATE_TYPE]=\"DISTRICT\")",
+          "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############"
+        },
+        {
+          "name": "Annualizes Booking MTD 2025",
+          "dataType": "Double",
+          "expression": "CALCULATE(Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualized Bookings MTD]),BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Fiscal Year]=\"2025\",BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[AGGREGATE_TYPE]=\"STATE\")",
+          "formatString": "General Number"
+        },
+        {
+          "name": "$ difference from same time last year",
+          "dataType": "Double",
+          "expression": "CALCULATE(Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualized Bookings YTD]),BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Fiscal Year]=\"2025\",BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[AGGREGATE_TYPE]=\"STATE\") - CALCULATE(Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualized Bookings YTD]),BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Fiscal Year]=\"2024\",BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[AGGREGATE_TYPE]=\"STATE\")",
+          "formatString": "General Number"
+        },
+        {
+          "name": "% of '2025 Budget'",
+          "dataType": "Double",
+          "expression": "ROUND([Annualizes Booking YTD 2025]/640000000,2)",
+          "formatString": "0\\ %;-0\\ %;0\\ %",
+          "references": {
+            "measures": [
+              {
+                "schema": "extension",
+                "entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+                "name": "Annualizes Booking YTD 2025"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Annualizes Booking YTD 2024(Productline)",
+          "dataType": "Double",
+          "expression": "CALCULATE(Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualized Bookings YTD]),BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Fiscal Year]=\"2024\",BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[AGGREGATE_TYPE]=\"NATIONAL\")",
+          "formatString": "General Number"
+        },
+        {
+          "name": "Annualizes Booking YTD (Productline)",
+          "dataType": "Double",
+          "expression": "CALCULATE(Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualized Bookings YTD]),BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[AGGREGATE_TYPE]=\"STATE\")",
+          "formatString": "General Number"
+        },
+        {
+          "name": "Forecast 2025(Product line)",
+          "dataType": "Double",
+          "expression": "CALCULATE(SUM(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Forecast]),BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Fiscal Year]=\"2025\",BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[AGGREGATE_TYPE]=\"NATIONAL\")",
+          "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############"
+        },
+        {
+          "name": "ACV 2025",
+          "dataType": "Double",
+          "expression": "CALCULATE(Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualized Contract Year Value]),BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Fiscal Year]=\"2025\",BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[AGGREGATE_TYPE]=\"STATE\")",
+          "formatString": "General Number"
+        },
+        {
+          "name": "ACV Productline",
+          "dataType": "Double",
+          "expression": "CALCULATE(Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualized Contract Year Value]),BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[AGGREGATE_TYPE]=\"STATE\")",
+          "formatString": "General Number"
+        },
+        {
+          "name": "Target - ACV 2025",
+          "dataType": "Double",
+          "expression": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[ACV 2025]-VALUE(749524558)",
+          "formatString": "General Number",
+          "references": {
+            "measures": [
+              {
+                "schema": "extension",
+                "entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+                "name": "ACV 2025"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ACV 2024 - ACV 2025",
+          "dataType": "Double",
+          "expression": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[ACV 2025] - CALCULATE(Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualized Contract Year Value]),BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Fiscal Year]=\"2024\",BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[AGGREGATE_TYPE]=\"STATE\")",
+          "formatString": "General Number",
+          "references": {
+            "measures": [
+              {
+                "schema": "extension",
+                "entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+                "name": "ACV 2025"
+              }
+            ]
+          }
+        },
+        {
+          "name": "% of '2025 Budget ACV'",
+          "dataType": "Double",
+          "expression": "[ACV 2025]/749524558",
+          "formatString": "0.00\\ %;-0.00\\ %;0.00\\ %",
+          "references": {
+            "measures": [
+              {
+                "schema": "extension",
+                "entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+                "name": "ACV 2025"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Target -  2025 YTD Booking",
+          "dataType": "Double",
+          "expression": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualizes Booking YTD 2025]-CALCULATE(SUM(Stackedtable[Value]),Stackedtable[TYPE]=\"Target 2025\")",
+          "formatString": "General Number",
+          "references": {
+            "measures": [
+              {
+                "schema": "extension",
+                "entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+                "name": "Annualizes Booking YTD 2025"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Annualizes Booking YTD 2024",
+          "dataType": "Double",
+          "expression": "CALCULATE(Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualized Bookings YTD]),BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Fiscal Year]=FORMAT(VALUE(FORMAT(TODAY(), \"YYYY\")) - 1, \"0000\")\n,BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[AGGREGATE_TYPE]=\"DISTRICT\")",
+          "formatString": "General Number"
+        },
+        {
+          "name": "Annualized Booking Growth %",
+          "dataType": "Double",
+          "expression": "\nVAR Curr = COALESCE([Annualizes Booking YTD 2025], 0)\nVAR Prev = COALESCE([Annualizes Booking YTD 2024], 0)\nRETURN \n    IF(\n        Prev = 0,\n        BLANK(),\n        DIVIDE(Curr - Prev, Prev)\n    )\n\n\n",
+          "formatString": "0.0\\ %;-0.0\\ %;0.0\\ %",
+          "references": {
+            "measures": [
+              {
+                "schema": "extension",
+                "entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+                "name": "Annualizes Booking YTD 2025"
+              },
+              {
+                "schema": "extension",
+                "entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+                "name": "Annualizes Booking YTD 2024"
+              }
+            ]
+          }
+        },
+        {
+          "name": "YoY Trend",
+          "dataType": "Double",
+          "expression": "\nVAR Growth = [Annualized Booking Growth %]\nRETURN \n    SWITCH(\n        TRUE(),\n        ISBLANK(Growth), BLANK(),\n        Growth > 0, \"↑ Up\",\n        Growth < 0, \"↓ Down\",\n        \"→ No Change\"\n    )\n",
+          "formatString": "General Number",
+          "references": {
+            "measures": [
+              {
+                "schema": "extension",
+                "entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+                "name": "Annualized Booking Growth %"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Annualizes Booking YTD 2024 Dis",
+          "dataType": "Double",
+          "expression": "CALCULATE(Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualized Bookings YTD]),BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Fiscal Year]=FORMAT(VALUE(FORMAT(TODAY(), \"YYYY\")) - 1, \"0000\")\n,BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[AGGREGATE_TYPE]=\"District\")",
+          "formatString": "General Number"
+        },
+        {
+          "name": "Annualizes Booking YTD 2025 Dis",
+          "dataType": "Double",
+          "expression": "CALCULATE(Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualized Bookings YTD]),BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Fiscal Year]=FORMAT(VALUE(FORMAT(TODAY(), \"YYYY\")), \"0000\")\n,BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[AGGREGATE_TYPE]=\"DISTRICT\")",
+          "formatString": "General Number"
+        },
+        {
+          "name": "Annualized Booking Growth % District",
+          "dataType": "Double",
+          "expression": "\nVAR Curr = BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualizes Booking YTD 2025 Dis]\nVAR Prev = BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualizes Booking YTD 2024 Dis]\nRETURN \n    IF(\n        ISBLANK(Prev) || Prev = 0,\n        BLANK(),\n        DIVIDE(Curr - Prev, Prev, 0)\n    )\n",
+          "formatString": "0.0\\ %;-0.0\\ %;0.0\\ %",
+          "references": {
+            "measures": [
+              {
+                "schema": "extension",
+                "entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+                "name": "Annualizes Booking YTD 2025 Dis"
+              },
+              {
+                "schema": "extension",
+                "entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+                "name": "Annualizes Booking YTD 2024 Dis"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Rank Growth",
+          "dataType": "Double",
+          "expression": "RANKX(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY,[Annualized Booking Growth % District],,DESC,Dense)",
+          "formatString": "General Number",
+          "references": {
+            "measures": [
+              {
+                "schema": "extension",
+                "entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+                "name": "Annualized Booking Growth % District"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Annualized Booking Growth Test",
+          "dataType": "Double",
+          "expression": "\nVAR Curr = COALESCE([Annualizes Booking YTD 2025], 0)\nVAR Prev = COALESCE([Annualizes Booking YTD 2024], 0)\nRETURN\n    FORMAT(Curr, \"0\") & \" | \" & FORMAT(Prev, \"0\") & \" | \" & FORMAT(DIVIDE(Curr - Prev, Prev), \"0.00%\")\n)",
+          "formatString": "General Number",
+          "references": {
+            "measures": [
+              {
+                "schema": "extension",
+                "entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+                "name": "Annualizes Booking YTD 2025"
+              },
+              {
+                "schema": "extension",
+                "entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+                "name": "Annualizes Booking YTD 2024"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Rank for grid",
+          "dataType": "Double",
+          "expression": "RANKX(\n    ALLSELECTED(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Product Line]),\n    CALCULATE(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualizes Booking YTD 2025]),\n    ,\n    DESC,\n    DENSE\n)\n",
+          "formatString": "General Number",
+          "references": {
+            "measures": [
+              {
+                "schema": "extension",
+                "entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+                "name": "Annualizes Booking YTD 2025"
+              }
+            ]
+          }
+        },
+        {
+          "name": "NoDataMessage",
+          "dataType": "Double",
+          "expression": "\nIF (\n    ISBLANK(Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[% of Current Year Budget])),\n    \"⚠️ No data available at this level\",\n      \"\" \n)",
+          "formatString": "General Number"
+        },
+        {
+          "name": "Annualizes Booking YTD (Productline) 2",
+          "dataType": "Double",
+          "expression": "CALCULATE(Sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Annualized Bookings YTD]),BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[AGGREGATE_TYPE]=\"STATE\")/1000000",
+          "formatString": "General Number"
+        },
+        {
+          "name": "Forecast 2025(Product line)2",
+          "dataType": "Double",
+          "expression": "CALCULATE(SUM(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Forecast]),BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Fiscal Year]=\"2025\",BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[AGGREGATE_TYPE]=\"NATIONAL\")/1000000",
+          "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############"
+        },
+        {
+          "name": "Target 2",
+          "dataType": "Double",
+          "expression": "CALCULATE(sum(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY[Target]))/1000000",
+          "formatString": "General Number"
+        }
+      ]
+    },
+    {
+      "name": "Active user(Excel File)",
+      "measures": [
+        {
+          "name": "Row index",
+          "dataType": "Double",
+          "expression": "RANKX(BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY,[Annualized Booking Growth % District],,DESC)",
+          "formatString": "General Number",
+          "references": {
+            "measures": [
+              {
+                "schema": "extension",
+                "entity": "BI_SFDC_BOOKINGS_ANNUALIZED_ACV_YOY",
+                "name": "Annualized Booking Growth % District"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "BI_PSM_ACTIVE_STUDENT",
+      "measures": [
+        {
+          "name": "Active stuedents this academic year",
+          "dataType": "Double",
+          "expression": "CALCULATE(SUM(BI_PSM_ACTIVE_STUDENT[ACTIVE_STUDENT]),BI_PSM_ACTIVE_STUDENT[IS_TRACKED_AY] = 1,BI_PSM_ACTIVE_STUDENT[IS_CURRENT_MONTH] = 1,BI_PSM_ACTIVE_STUDENT[AGGREGATE_TYPE]=\"NATIONAL\")",
+          "formatString": "General Number"
+        },
+        {
+          "name": "Max Target",
+          "dataType": "Double",
+          "expression": "CALCULATE(MAX(BI_PSM_ACTIVE_STUDENT[TARGET]),BI_PSM_ACTIVE_STUDENT[ACADEMIC_YEAR] = \"year2024-2025\",BI_PSM_ACTIVE_STUDENT[AGGREGATE_TYPE]=\"NATIONAL\")",
+          "formatString": "General Number"
+        },
+        {
+          "name": "Active Stuedent to Target",
+          "dataType": "Double",
+          "expression": "[Growth]/[Target Yearly]",
+          "formatString": "General Number",
+          "references": {
+            "measures": [
+              {
+                "schema": "extension",
+                "entity": "BI_PSM_ACTIVE_STUDENT",
+                "name": "Growth"
+              },
+              {
+                "schema": "extension",
+                "entity": "BI_PSM_ACTIVE_STUDENT",
+                "name": "Target Yearly"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Growth",
+          "dataType": "Double",
+          "expression": "CALCULATE(SUM(BI_PSM_ACTIVE_STUDENT[NATIONAL_YTD_ACTIVE_STUDENT_GROWTH]),BI_PSM_ACTIVE_STUDENT[IS_TRACKED_AY] = 1,BI_PSM_ACTIVE_STUDENT[IS_CURRENT_MONTH] = 1,BI_PSM_ACTIVE_STUDENT[AGGREGATE_TYPE]=\"NATIONAL\")",
+          "formatString": "General Number"
+        },
+        {
+          "name": "Target Yearly",
+          "dataType": "Double",
+          "expression": "1000000",
+          "formatString": "General Number"
+        }
+      ]
+    },
+    {
+      "name": "PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP",
+      "measures": [
+        {
+          "name": "Progress %",
+          "dataType": "Double",
+          "expression": "SUM(PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP[Value])/100",
+          "formatString": "0\\ %;-0\\ %;0\\ %"
+        },
+        {
+          "name": "Target Pi",
+          "dataType": "Double",
+          "expression": "CALCULATE(sum(PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP[Value]),PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP[Attribute]=\"Target\",PSM_YTD_PERSONALIZED_INSTRUCTION_RATINGS_ROLLUP[AGGREGATE_TYPE]=\"NATIONAL_LEVEL\")/100",
+          "formatString": "0\\ %;-0\\ %;0\\ %"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "efd260ec150037292471",
+  "position": {
+    "x": 6.9717171144081025,
+    "y": 578.65252049587252,
+    "z": 10000,
+    "height": 123.16700235454314,
+    "width": 1259.5568920030637,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "The Company KPI Dashboard serves to show an overview of how our organization is tracking towards achieving our determined KPIs for the year. Click into any of the gauges above to see more detailed information including state and product level insights.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "12pt",
+                      "color": "#00528d"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Click this ",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "12pt",
+                      "color": "#00528d"
+                    }
+                  },
+                  {
+                    "value": "link",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "12pt",
+                      "color": "#00528d"
+                    },
+                    "url": "https://curriculumassoc.sharepoint.com/:w:/r/sites/PublicDataStrategyProgram/Document%20Library/Business+Glossary.docx?d=w1ea541e9603c4b0eb32c4998bcfe2876&csf=1&web=1&e=eaLkpP"
+                  },
+                  {
+                    "value": " to access our business Glossary, where you'll find definitions and explanations of key terms concepts.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "12pt",
+                      "color": "#00528d"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

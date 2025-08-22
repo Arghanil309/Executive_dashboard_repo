@@ -1,0 +1,152 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "df9e6ef569118136711d",
+  "displayName": "PI Health view asper business need",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "44ee838f0bbeb2d198b6",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2"
+              }
+            },
+            "Property": "calendar_year"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "p",
+              "Entity": "PSM_MONTHLY_INSTRUCTION_HEALTH_RATINGS_YOY2",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "p"
+                          }
+                        },
+                        "Property": "calendar_year"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'2024'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'2025'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'2023'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ],
+    "filterSortOrder": "Custom"
+  },
+  "pageBinding": {
+    "name": "82f10a47720c9770d4aa",
+    "type": "Default",
+    "parameters": [],
+    "referenceScope": "CrossReport"
+  },
+  "objects": {
+    "displayArea": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "415L"
+              }
+            }
+          },
+          "foregroundColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#252423'"
+                  }
+                }
+              }
+            }
+          },
+          "titleSize": {
+            "expr": {
+              "Literal": {
+                "Value": "12L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "7bbf83c149d072541005",
+      "target": "a3ddf7ce3540ee01aba8",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a54ecef9365b16276c1a",
+      "target": "56dee105d80c908d5b78",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a54ecef9365b16276c1a",
+      "target": "9a4ae48d27ace6d5d8ba",
+      "type": "NoFilter"
+    }
+  ]
+}
